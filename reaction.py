@@ -8,7 +8,7 @@ right_button = Button(15)
 left_button = Button(14)
 left_name = input('left player name is ')
 right_name = input('right player name is ')
-left_points = 0
+left_points = 1
 right_points = 0
 def pressed(button):
     global left_points,right_points
