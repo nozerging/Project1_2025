@@ -46,5 +46,5 @@ while (True):
     print(f"takes {time_used} s")
     temp = input("Do you want to continue?(y/n)")
     if (temp == 'n' or temp == 'no'):
-        print(f'{left_name} player win {left_points} score,{right_name} player {right_points} score. ')
+        print(f'{left_name} player win {left_points} score,{right_name} player win {right_points} score. ')
         exit()
