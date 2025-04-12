@@ -33,8 +33,8 @@ while(True):
     left_button.when_pressed=pressed
     scanner()
     end_time=time.time()
-    time=end_time-start_time
-    print(f"takes {time} s")
+    time_used=end_time-start_time
+    print(f"takes {time_used} s")
     temp=input("Do you want to continue?(y/n)")
     if(temp=='n' or temp=='no'):
         exit()
