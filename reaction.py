@@ -1,7 +1,7 @@
 from gpiozero import LED,Button
 from time import sleep
 from random import uniform
-
+import time
 led=LED(4)
 right_button=Button(15)
 left_button=Button(14)
@@ -26,11 +26,15 @@ def scanner():
 
 while(True):
     led.on()
-    sleep(uniform(1,2))
+    sleep(uniform(5,10))
     led.off()
+    start_time=time.time()
     right_button.when_pressed=pressed 
     left_button.when_pressed=pressed
     scanner()
+    end_time=time.time()
+    time=end_time-start_time
+    print(f"takes {time} s")
     temp=input("Do you want to continue?(y/n)")
     if(temp=='n' or temp=='no'):
         exit()
